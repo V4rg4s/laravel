@@ -79,6 +79,10 @@
         </div>
     </section>
 
+    @yield('contenido')
+        <Section class="catalog">
+    </Section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
