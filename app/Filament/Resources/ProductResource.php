@@ -63,7 +63,7 @@ class ProductResource extends Resource
         return $table
             ->columns(components: [
                 TextColumn::make(name:'name')
-                    ->label(label: 'Naombre')
+                    ->label(label: 'Nombre')
                     ->searchable()
                     ->sortable(),
                 TextColumn::make(name: 'description')

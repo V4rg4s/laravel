@@ -30,47 +30,36 @@
         </div>
     </header>
 
-    <!-- Sección de búsqueda -->
-    <section class="search-section">
-        <h2>Busca un producto</h2>
-        <form class="search-form">
-            <input type="text" placeholder="Buscar productos..." class="search-input">
-             
-            <select class="search-select" wire:model.live="category">
-                <option value="">Todas las categorías</option>
-               
-            </select>
-        </form>
-    </section>
-
-    <!-- Catálogo de productos -->
+    @yield('contenido')
+<!-- 
+    Catálogo de productos 
     <section class="catalog">
         <h2>Catálogo de Productos</h2>
         <div class="products">
-            <!-- Producto 1 -->
+            Producto 1 
             <div class="product-card">
                 <img src="{{ asset(path: 'assets/image/product1.jpg') }}" alt="Producto 1">
                 <h3>Producto 1</h3>
                 <p>Descripción breve del producto.</p>
                 <p class="price">$100.00</p>
             </div>
-            <!-- Producto 2 -->
+            Producto 2 
             <div class="product-card">
                 <img src="{{ asset(path: 'assets/image/product2.jpg') }}" alt="Producto 2">
                 <h3>Producto 2</h3>
                 <p>Descripción breve del producto.</p>
                 <p class="price">$200.00</p>
             </div>
-            <!-- Producto 3 -->
+            Producto 3 
             <div class="product-card">
                 <img src="{{ asset(path: 'assets/image/product3.jpeg') }}" alt="Producto 3">
                 <h3>Producto 3</h3>
                 <p>Descripción breve del producto.</p>
                 <p class="price">$150.00</p>
             </div>
-            <!-- Más productos aquí -->
+            Más productos aquí 
         </div>
-        <!-- Paginación -->
+        Paginación 
         <div class="pagination">
             <a href="#" class="page">1</a>
             <a href="#" class="page">2</a>
@@ -78,8 +67,7 @@
             <a href="#" class="page">Siguiente &raquo;</a>
         </div>
     </section>
-
-    @yield('contenido')
+-->
         <Section class="catalog">
     </Section>
 
