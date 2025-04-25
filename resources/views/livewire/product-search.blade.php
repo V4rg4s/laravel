@@ -1,6 +1,6 @@
 <div>
-        <!-- Sección de búsqueda -->
-        <section class="search-section" id="productos">
+    <!-- Sección de búsqueda -->
+    <section class="search-section" id="productos">
         <h2>Busca un producto</h2>
         <form class="search-form" wire:submit.prevent>
             <input type="text" placeholder="Buscar productos..." class="search-input" wire:model.live="query">
@@ -17,24 +17,21 @@
     <!-- Catálogo de productos -->
     <section class="catalog">
         <h2>Catálogo de Productos</h2>
+        
         <div class="products">
-
-            <!-- Producto 1 -->
             @foreach ($products as $product)
                 <div class="product-card">
                     <img src="{{ asset('storage/'.$product->image)}}" alt="{{ $product->name }}">
-                    <h3>{{ $product->name}}</h3>
+                    <h3>{{ $product->name }}</h3>
                     <p>{{ $product->description }}</p>
                     <p class="price">${{ $product->price }}</p>
                 </div>
             @endforeach
+        </div>
 
         <!-- Paginación -->
         <div class="pagination">
-            
             {{ $products->links('vendor.pagination.custom') }}
-
         </div>
     </section>
-
 </div>
