@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Livewire\Component;
 use Illuminate\view\View;
+use Illuminate\Database\Eloquent\Builder;
 
 class ProductSearch extends Component
 {
@@ -13,9 +14,16 @@ class ProductSearch extends Component
     public $category = "";
     public $categories;
 
-    public function mount(): void
-    {
+    public function mount(): void{
         $this->categories = Category::all();
+    }
+
+    public function updateQuery(): void{
+        $this->resetPage();
+    }
+
+    public function updateCategory(): void{
+        $this->resetPage();
     }
 
     public function render(): View

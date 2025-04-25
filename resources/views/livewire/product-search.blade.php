@@ -1,9 +1,9 @@
 <div>
         <!-- Sección de búsqueda -->
-        <section class="search-section">
+        <section class="search-section" id="productos">
         <h2>Busca un producto</h2>
-        <form class="search-form">
-            <input type="text" placeholder="Buscar productos..." class="search-input">
+        <form class="search-form" wire:submit.prevent>
+            <input type="text" placeholder="Buscar productos..." class="search-input" wire:model.live="query">
              
             <select class="search-select" wire:model.live="category">
                 <option value="">Todas las categorías</option>
